@@ -1,0 +1,73 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Project2.Models
+@model Monhoc
+<style>
+    button {
+        font-size: larger;
+        margin-left:20px;
+    }
+</style>
+<h2 style="margin-left:50px">Chọn môn</h2>
+
+@foreach (Monhoc m in ViewBag.mon)
+{
+   <a asp-controller="Quiz" asp-action="Monthi2" asp-route-id="@m.Id">
+        <button >@m.Name</button>
+   </a>
+    
+    <br />
+    <br />
+
+}
+<br />
+@if(ViewBag.dethi != null)
+{
+    <table border="1">
+        <tr>
+            
+            <td>Code Quiz</td>
+            <td>Action</td>
+        </tr>
+        @foreach (Dethi m in ViewBag.dethi)
+        {
+            <tr>
+                <td>Đề @m.Id</td>
+                <td>
+                    @if (m.Status !=1 && m.Status!=2 )
+                    {
+                        <a asp-controller="Quiz" asp-action="LamDe" asp-route-id="@m.Id">
+                            <button>Take Quiz</button>
+                        </a>
+                    }
+                    
+                    @if (m.Status == 1)
+                    {
+                        <a asp-controller="Quiz" asp-action="Retake" asp-route-id="@m.Id">
+                            <button>Retake</button>
+                        </a>
+                    }
+                    @if (m.Status == 2)
+                    {
+                        <a asp-controller="Statics" asp-action="Retake" asp-route-id="@m.Id">
+                            <button>View</button>
+                        </a>
+                    }
+                    
+                </td>
+            </tr>
+            
+        }
+    </table>
+
+    
+}<br /><br />
+<a asp-controller="Account" asp-action="Index">
+    <button>Back to Home</button>
+</a>
+

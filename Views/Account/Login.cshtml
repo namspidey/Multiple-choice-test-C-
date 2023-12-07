@@ -1,0 +1,17 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div style="text-align:center">
+<h2>Login</h2>
+<form asp-controller="Account" asp-action="Login" method="post">
+    Username: <input type="text" name="username" /><br /><br />
+    Password: <input type="password" name="password" /><br /><br />
+    <button style="font-size:larger" type="submit">Login</button>
+</form>
+    <h4 style="color:red">@ViewBag.err</h4>
+
+</div>

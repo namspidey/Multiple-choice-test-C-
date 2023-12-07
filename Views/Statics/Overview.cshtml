@@ -1,0 +1,33 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int stt = 0;
+}
+@using Project2.Models
+
+<table border="1">
+    <tr>
+        <td>Quiz ID</td>
+        <td>Date</td>
+        <td>Time</td>
+        <td>Mark</td>
+        <td>Action</td>
+    </tr>
+    
+        @foreach (Bailam b in ViewBag.list)
+        {
+        <tr>
+            <td>@ViewBag.idDe[stt]</td>
+            <td>@ViewBag.listDate[stt]</td>
+            <td>@ViewBag.time[stt]</td>
+            <td>@b.Mark</td>
+
+            <td><a asp-action="Detail" asp-controller="Statics" asp-route-id="@b.Id">View</a></td>
+            
+        </tr>
+        stt++;
+        }
+    
+</table>

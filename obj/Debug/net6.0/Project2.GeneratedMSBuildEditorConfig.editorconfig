@@ -1,0 +1,53 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Project2
+build_property.RootNamespace = Project2
+build_property.ProjectDir = D:\Ki5\PRN211\project\Project1\Project2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\Ki5\PRN211\project\Project1\Project2
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Account/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Quiz/InKetQua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxJbktldFF1YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Quiz/Ketqua.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxLZXRxdWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Quiz/LamDe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxMYW1EZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Quiz/Monthi.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxNb250aGkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Quiz/Retake.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUXVpelxSZXRha2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Statics/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGljc1xEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Ki5/PRN211/project/Project1/Project2/Views/Statics/Overview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGljc1xPdmVydmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 

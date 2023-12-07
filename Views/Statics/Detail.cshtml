@@ -1,0 +1,55 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int stt = 1;
+    Dictionary<int, string> answerMapping = new Dictionary<int, string>
+    {
+        { 1, "A" },
+        { 2, "B" },
+        { 3, "C" },
+        { 4, "D" },
+        { 0,"Not choosen"}
+    };
+
+    
+}
+@using Project2.Models
+@model Bailam
+
+<div style="font-size:large;margin-left:10px">
+    ID: @Model.Id<br />
+    Start time: @Model.Start<br />
+    End time: @Model.End<br />
+    Mark:@Model.Mark<br />
+    <a asp-controller="Account" asp-action="Index">
+        <button style="font-size:large">Back to Home</button>
+    </a>
+    <a asp-controller="Statics" asp-action="Overview">
+        <button style="font-size:large">Back to Statics</button>
+    </a>
+    @foreach (var c in ViewBag.data)
+    {
+    
+        <h4 style="font:200">Câu @stt: @c.nd  </h4>
+        <p>A. @c.a</p>
+        <p>B. @c.b</p>
+        <p>C. @c.c</p>
+        <p>D. @c.d</p>
+        @if (c.ic == 1)
+        {
+            <p>Answer: @answerMapping[c.trl]    <span style="color:green;font-weight:bold;margin-left:10px">Correct</span></p>
+        }
+        else
+        {
+            <p>Answer: @answerMapping[c.trl]    <span style="color:red;font-weight:bold">Incorrect</span></p>
+            <p>Correct answer: <span style="font-weight:bold">@answerMapping[c.dung]</span></p>
+        }
+
+
+
+    stt++;
+    }
+</div>

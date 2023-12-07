@@ -1,0 +1,105 @@
+﻿@addTagHelper *,Microsoft.AspNetCore.Mvc.TagHelpers
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    int stt = 1;
+}
+
+@using Project2.Models
+@model List<TraloiDetail>
+<div style="margin-left:10px;font-size:large">
+    @if (ViewBag.mess != null)
+    {
+        @ViewBag.mess
+
+        <br />
+
+        <br />
+        <a asp-controller="Quiz" asp-action="Monthi">
+            <button style="font-size:large">Back to list Quiz</button>
+        </a>
+
+    }
+</div>
+
+<div style="margin-left:10px">
+    @if (ViewBag.mess == null)
+    {
+        <form asp-controller="Quiz" asp-action="ReKetqua" method="get">
+            <input type="text" name="DethiId" value="@ViewBag.DethiId" hidden />
+            <input type="datetime" name="Start" value="@ViewBag.d" hidden />
+            @foreach (var c in ViewBag.data)
+            {
+                <h3>Câu @stt: @c.nd</h3>
+                @if (c.trl == 0)
+                {
+                    <input hidden name="cau_@stt" type="radio" value="0" checked />
+                    
+                }
+                
+
+
+                @if (c.trl == 1)
+                {
+                    <input name="cau_@stt" type="radio" value="1" checked />
+                    @c.a
+                    <br />
+                }
+                else
+                {
+                    <input name="cau_@stt" type="radio" value="1"  />
+                    @c.a
+                    <br />
+                }
+
+                @if (c.trl == 2)
+                {
+                    <input name="cau_@stt" type="radio" value="2" checked />
+                    @c.b
+                    <br />
+                }
+                else
+                {
+                    <input name="cau_@stt" type="radio" value="2"  />
+                    @c.b
+                    <br />
+                }
+
+                @if (c.trl == 3)
+                {
+                    <input name="cau_@stt" type="radio" value="3" checked />
+                    @c.c
+                    <br />
+                }
+                else
+                {
+                    <input name="cau_@stt" type="radio" value="3"  />
+                    @c.c
+                    <br />
+                }
+
+                @if (c.trl == 4)
+                {
+                    <input name="cau_@stt" type="radio" value="4" checked />
+                    @c.c
+                    <br />
+                }
+                else
+                {
+                    <input name="cau_@stt" type="radio" value="4"  />
+                    @c.c
+                    <br />
+                }
+
+
+                
+                stt++;
+            }
+            <br />
+            <input style="font-size:large" type="submit" value="SUBMIT" /><br>
+
+            Continue time: @ViewBag.d
+        </form>
+    }
+</div>
